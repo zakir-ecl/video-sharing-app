@@ -32,7 +32,7 @@ const UpdateTrack = ({ classes, track }) => {
 
   const handleVideoChange = event => {
     const selectedFile = event.target.files[0];
-    const fileSizeLimit = 10000000; // 10mb
+    const fileSizeLimit = 50000000; // 50mb
     if (selectedFile && selectedFile.size > fileSizeLimit) {
       setFileError(`${selectedFile.name}: File size too large`);
     } else {
@@ -95,10 +95,10 @@ const UpdateTrack = ({ classes, track }) => {
             return (
               <Dialog open={open} className={classes.dialog}>
                 <form onSubmit={event => handleSubmit(event, updateTrack)}>
-                  <DialogTitle>Update Track</DialogTitle>
+                  <DialogTitle>Update</DialogTitle>
                   <DialogContent>
                     <DialogContentText>
-                      Add a Title, Description & Video File (Under 10MB)
+                      Add a Title, Description & Video File (Under 50MB)
                     </DialogContentText>
                     <FormControl fullWidth>
                       <TextField
