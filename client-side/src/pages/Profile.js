@@ -8,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ThumbUpIcon from "@material-ui/icons/ThumbUpTwoTone";
-import AudiotrackIcon from "@material-ui/icons/AudiotrackTwoTone";
+import VideocamIcon from '@material-ui/icons/Videocam';
 import Divider from "@material-ui/core/Divider";
 import format from "date-fns/format";
 
@@ -41,7 +41,7 @@ const Profile = ({ classes, match }) => {
             {/* Created Videos */}
             <Paper elevation={1} className={classes.paper}>
               <Typography variant="title" className={classes.title}>
-                <AudiotrackIcon className={classes.VideoIcon} />
+                <VideocamIcon className={classes.VideoIcon} />
                 Created Videos
               </Typography>
               {data.user.trackSet.map(track => (
